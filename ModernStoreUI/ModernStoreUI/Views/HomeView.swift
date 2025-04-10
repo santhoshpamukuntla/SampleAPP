@@ -27,7 +27,7 @@ struct HomeView: View {
                             Text("Delivery Address")
                                 .font(.caption)
                                 .foregroundColor(.gray)
-                            Text("92 High Street, London")
+                            Text("92 High Street, Canada")
                                 .font(.headline)
                         }
                         Spacer()
@@ -60,6 +60,16 @@ struct HomeView: View {
                         .padding(.horizontal)
 
                     // Categories Section
+                    HStack {
+                        Text("Categories")
+                            .font(.title2).bold()
+                        Spacer()
+                        Text("See All")
+                            .font(.subheadline)
+                            .foregroundColor(.blue)
+                    }
+                    .padding(.horizontal)
+
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(categories, id: \.self) { category in
